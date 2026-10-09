@@ -4,13 +4,13 @@ const cards = [
   {
     title: "🔥 Hot & Fresh Delivered",
     description: "Express fast delivery right at your doorstep, piping hot and ready to enjoy.",
-    image: "/images/card1.jfif",
+    image: "/images/card1.jpg",
     badge: "Fast Delivery",
   },
   {
     title: "Injucted Brost",
     description: "Our newly introduced crispy chicken loaded with amazing flavor.",
-    image: "/images/brost.PNG",
+    image: "/images/brost.jpg",
     badge: "NEW",
   },
   {
