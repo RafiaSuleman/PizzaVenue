@@ -3,7 +3,12 @@
 import { useState } from "react";
 import { Menu, Search, MapPin } from "lucide-react";
 import Image from "next/image";
-import PickupLocations from "./picupLoc";
+import dynamic from "next/dynamic";
+
+const PickupLocations = dynamic(
+  () => import("./picupLoc"),
+  { ssr: false }
+);
 import BranchWhatsAppModal from "./whatsAppBranchSec";
 import Link from "next/link";
 
