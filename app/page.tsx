@@ -4,6 +4,7 @@ import MenuCategories from "./component/menuCategories";
 import StaticCards from "./component/staticCard";
 import Deals from "./component/deals";
 import Branches from "./component/branches";
+import Reviews from "./component/reviews";
 export default function Home() {
   return (
    <div>
@@ -12,6 +13,7 @@ export default function Home() {
     <StaticCards/>
     <Deals/>
     <Branches/>
+    <Reviews/>
    </div>
   );
 }
