@@ -6,31 +6,31 @@ import { useRouter } from "next/navigation";
 const categories = [
   {
     name: "PIZZAS",
-    image: "/images/chicken-tikka.jfif",
+    image: "/images/chicken-tikka.jpg",
   },
   {
     name: "CHICKEN",
-    image: "/images/fry-chicken.jfif",
+    image: "/images/fry-chicken.jpg",
   },
   {
     name: "PASTAS",
-    image: "/images/pasta.jfif",
+    image: "/images/pasta.jpg",
   },
   {
     name: "BURGERS",
-    image: "/images/zing.jfif",
+    image: "/images/zing.jpg",
   },
   {
     name: "SIDES",
-    image: "/images/sand.jfif",
+    image: "/images/sand.jpg",
   },
   {
     name: "DRINKS",
-    image: "/images/cola.jfif",
+    image: "/images/cola.jpg",
   },
   {
     name: "FRIES",
-    image: "/images/friess.jfif",
+    image: "/images/friess.jpg",
   },
 ];
 
