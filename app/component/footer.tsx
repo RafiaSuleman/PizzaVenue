@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Clock, Phone, ArrowUpRight } from "lucide-react";
@@ -84,9 +83,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <p className="text-sm font-bold text-white">
-                  Daily Service
-                </p>
+                <p className="text-sm font-bold text-white">Daily Service</p>
                 <p className="mt-2 text-sm leading-6 text-gray-400">
                   10:00 AM – 3:00 AM
                 </p>
@@ -99,48 +96,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-5 text-sm font-extrabold uppercase tracking-[2px] text-white">
-              Contact Us
+            <h3 className="mb-4 text-sm font-extrabold uppercase tracking-[2px] text-white">
+              Our Locations
             </h3>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin
-                  size={20}
-                  className="mt-0.5 shrink-0 text-[#F4A11A]"
-                />
-                <div>
-                  <p className="text-sm font-bold text-white">
-                    A.R Garden Branch
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-gray-400">
-                    Plaza No. 84, Hassan Commercial, A.R Garden Phase-2,
-                    Lahore
-                  </p>
-                </div>
-              </div>
+            <p className="mb-4 text-sm leading-6 text-gray-400">
+              Find your nearest Pizza Venue branch in Lahore.
+            </p>
 
-              <div className="flex items-start gap-3">
-                <Phone
-                  size={19}
-                  className="mt-0.5 shrink-0 text-[#F4A11A]"
-                />
-                <div className="space-y-2">
-                  <a
-                    href="tel:+923347862222"
-                    className="block text-sm text-gray-400 transition hover:text-[#F4A11A]"
-                  >
-                    0334 786 2222
-                  </a>
-                  <a
-                    href="tel:+923297862222"
-                    className="block text-sm text-gray-400 transition hover:text-[#F4A11A]"
-                  >
-                    0329 786 2222
-                  </a>
-                </div>
-              </div>
-            </div>
+            <Link
+              href="/#branches"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[#F4A11A] transition hover:text-white"
+            >
+              <MapPin size={18} />
+              Explore Our Branches →
+            </Link>
           </div>
         </div>
 
