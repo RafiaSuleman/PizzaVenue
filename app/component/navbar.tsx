@@ -91,7 +91,7 @@ const Navbar = () => {
           </div>
 
           {/* Delivery Address */}
-          <button className="hidden items-center gap-2 rounded-full border border-gray-200 px-4 py-3 text-left hover:border-[#C62828] xl:flex">
+          {/* <button className="hidden items-center gap-2 rounded-full border border-gray-200 px-4 py-3 text-left hover:border-[#C62828] xl:flex">
             <MapPin size={20} className="text-[#C62828]" />
             <div>
               <p className="text-xs text-gray-500">Deliver to</p>
@@ -99,7 +99,7 @@ const Navbar = () => {
                 Enter Delivery Address
               </p>
             </div>
-          </button>
+          </button> */}
         </div>
       </nav>
 

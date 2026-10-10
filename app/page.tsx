@@ -5,6 +5,7 @@ import StaticCards from "./component/staticCard";
 import Deals from "./component/deals";
 import Branches from "./component/branches";
 import Reviews from "./component/reviews";
+import CTA from "./component/cta";
 export default function Home() {
   return (
    <div>
@@ -14,6 +15,7 @@ export default function Home() {
     <Deals/>
     <Branches/>
     <Reviews/>
+    <CTA />
    </div>
   );
 }
