@@ -20,7 +20,6 @@ export default function Home() {
     <Branches/>
     <Reviews/>
     <CTA />
-    <WhyChooseUs/>
    </div>
   );
 }
