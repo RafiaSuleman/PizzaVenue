@@ -1,99 +1,107 @@
+
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import { ArrowRight, MapPin, Flame } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-[85vh] w-full items-center overflow-hidden bg-linear-to-r from-[#C62828] via-[#D84315] to-[#E65100] py-10 lg:py-0">
-      
-      {/* Background Image with Blur Overlay */}
-      <div
-        className="absolute inset-0 scale-105 bg-cover bg-center opacity-25 blur-sm"
-        style={{ backgroundImage: "url('/pizza-bg.jpg')" }}
-      />
-
-      {/* Dark Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-black/20" />
-
-      {/* Decorative Floating Background Particles */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-10 h-3 w-3 animate-ping rounded-full bg-[#F4A11A]/40" />
-        <div className="absolute top-1/3 right-1/4 h-2 w-2 animate-bounce rounded-full bg-white/30" />
-        <div className="absolute bottom-12 left-1/3 h-4 w-4 animate-pulse rounded-full bg-[#F4A11A]/30" />
+    <section className="relative isolate min-h-[85vh] overflow-hidden bg-[#171717] text-white">
+      {/* Background glow */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -left-32 top-10 h-80 w-80 rounded-full bg-[#C62828]/25 blur-[100px]" />
+        <div className="absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-[#E65100]/20 blur-[110px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(23,23,23,0.98)_0%,rgba(23,23,23,0.88)_50%,rgba(70,22,12,0.65)_100%)]" />
       </div>
 
-      {/* Content Container */}
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-6 lg:flex-row lg:px-8">
-        
-        {/* Left Content (Text & CTA) */}
-        <div className="z-10 w-full py-4 lg:w-1/2 lg:py-10">
-          <p className="mb-3 inline-block rounded-full bg-black/30 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#F4A11A] backdrop-blur-md sm:text-sm">
-            🔥 Hot & Fresh Delivered
-          </p>
+      <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:gap-4 lg:px-12 lg:py-10">
+        {/* Left Content */}
+        <div className="relative z-10 max-w-2xl">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#F4A11A]/30 bg-white/6 px-4 py-2 backdrop-blur-sm">
+            <Flame size={17} className="text-[#F4A11A]" />
+            <span className="text-xs font-bold uppercase tracking-[2px] text-[#F4A11A] sm:text-sm">
+              Fresh From The Oven
+            </span>
+          </div>
 
-          <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Fresh Pizza.
+          <h1 className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+            BIG FLAVOR.
             <br />
-            <span className="text-[#F4A11A]">Bold Flavors.</span>
+            <span className="text-[#F4A11A]">NO</span>{" "}
+            <span className="text-[#C62828]">COMPROMISE.</span>
           </h1>
 
-          <p className="mt-4 max-w-md text-base leading-relaxed text-white/90 sm:text-lg">
-            Delicious pizzas made with fresh ingredients, loaded with flavor and
-            baked just the way you love.
+          <p className="mt-6 max-w-lg text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
+            Your cravings, our passion. Explore delicious pizzas, loaded
+            burgers, flavorful pastas, and deals made for sharing.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="mt-6 flex flex-wrap gap-4">
-            <button className="rounded-full bg-[#C62828] px-7 py-3.5 text-sm font-bold text-white shadow-2xl transition hover:scale-105 hover:bg-[#A91F1F] sm:text-base">
-              ORDER NOW
-            </button>
+          {/* Buttons */}
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="/menu"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#C62828] px-7 py-4 text-sm font-extrabold tracking-wide text-white shadow-lg shadow-red-950/30 transition duration-300 hover:-translate-y-1 hover:bg-[#E53935] sm:text-base"
+            >
+              EXPLORE MENU
+              <ArrowRight
+                size={19}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </Link>
 
-            <button className="rounded-full border-2 border-white px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white hover:text-[#C62828] sm:text-base">
-              VIEW MENU
-            </button>
+            <Link
+              href="#branches"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-4 text-sm font-bold text-white transition duration-300 hover:border-[#F4A11A] hover:bg-white/10 sm:text-base"
+            >
+              <MapPin size={18} className="text-[#F4A11A]" />
+              FIND A BRANCH
+            </Link>
           </div>
 
-          {/* Social Proof & Quick Info Bar */}
-          <div className="mt-8 flex items-center gap-6 border-t border-white/20 pt-6 text-white">
-            <div className="flex items-center gap-2">
-              <span className="text-xl">⭐</span>
-              <div>
-                <p className="text-sm font-bold leading-none">4.9 / 5.0</p>
-                <p className="text-xs text-white/70">1.2k+ Reviews</p>
-              </div>
-            </div>
-
-            <div className="h-8 w-px bg-white/20" />
-
-            <div className="flex items-center gap-2">
-              <span className="text-xl">⏱️</span>
-              <div>
-                <p className="text-sm font-bold leading-none">30 Mins</p>
-                <p className="text-xs text-white/70">Express Delivery</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Content (Pizza Image with Floating Discount Badge) */}
-        <div className="relative mt-8 flex w-full justify-center lg:mt-0 lg:w-1/2 lg:justify-end lg:-mr-12">
-          <div className="relative flex items-center justify-center w-full">
-            
-            {/* Floating Discount Badge */}
-            <div className="absolute top-4 left-6 z-20 flex animate-bounce items-center gap-1 rounded-full bg-[#C62828] px-4 py-2 font-bold text-white shadow-2xl border-2 border-[#F4A11A] text-xs sm:text-sm">
-              <span>🏷️</span> UP TO 30% OFF
-            </div>
-
-            <Image
-              src="/pizza.png"
-              alt="Delicious Pizza"
-              width={1000}
-              height={1000}
-              priority
-              className="h-auto w-full max-w-112.5 scale-125 transform object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] transition-transform duration-500 hover:scale-130 sm:max-w-137.5 lg:max-w-170 lg:scale-135"
-            />
+          {/* Category strip */}
+          <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-white/15 pt-6 text-xs font-semibold uppercase tracking-[1.5px] text-gray-400 sm:text-sm">
+            <span>Pizza</span>
+            <span className="text-[#F4A11A]">✦</span>
+            <span>Burgers</span>
+            <span className="text-[#F4A11A]">✦</span>
+            <span>Pasta</span>
+            <span className="text-[#F4A11A]">✦</span>
+            <span>More</span>
           </div>
         </div>
 
+        {/* Right Content */}
+        <div className="relative mx-auto flex w-full max-w-xl items-center justify-center lg:max-w-none">
+          {/* Decorative circle */}
+          <div className="absolute h-[75%] w-[75%] rounded-full border border-[#F4A11A]/20" />
+          <div className="absolute h-[60%] w-[60%] rounded-full bg-[#C62828]/20 blur-3xl" />
+
+          {/* Pizza Image */}
+          <Image
+            src="/pizza.png"
+            alt="Delicious Pizza from Pizza Venue"
+            width={900}
+            height={900}
+            priority
+            sizes="(max-width: 1024px) 90vw, 50vw"
+            className="relative z-10 h-auto w-full max-w-140 object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.55)] transition-transform duration-700 hover:scale-[1.04]"
+          />
+
+          {/* Floating badge */}
+          <div className="absolute bottom-5 left-0 z-20 rounded-2xl border border-white/10 bg-[#262626]/90 px-4 py-3 shadow-xl backdrop-blur-md sm:bottom-10 sm:left-2 sm:px-5 sm:py-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+              Made for
+            </p>
+            <p className="mt-1 text-lg font-extrabold text-white sm:text-xl">
+              Pizza Lovers
+              <span className="ml-2 text-[#F4A11A]">♥</span>
+            </p>
+          </div>
+
+          {/* Small accent badge */}
+          <div className="absolute right-0 top-5 z-20 rounded-full border border-[#F4A11A]/40 bg-[#F4A11A] px-4 py-2 text-xs font-black uppercase tracking-wider text-[#171717] shadow-lg sm:right-2 sm:top-10">
+            Taste the Difference
+          </div>
+        </div>
       </div>
     </section>
   );
