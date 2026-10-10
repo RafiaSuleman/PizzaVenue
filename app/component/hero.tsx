@@ -5,7 +5,7 @@ import { ArrowRight, MapPin, Flame } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative isolate min-h-[85vh] overflow-hidden bg-[#171717] text-white">
+    <section className="relative isolate min-h-[80vh] overflow-hidden bg-[#171717] text-white">
       {/* Background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -left-32 top-10 h-80 w-80 rounded-full bg-[#C62828]/25 blur-[100px]" />
@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(23,23,23,0.98)_0%,rgba(23,23,23,0.88)_50%,rgba(70,22,12,0.65)_100%)]" />
       </div>
 
-      <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:gap-4 lg:px-12 lg:py-10">
+      <div className="mx-auto grid min-h-[80vh] max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 lg:grid-cols-2 lg:gap-4 lg:px-12 lg:py-10">
         {/* Left Content */}
         <div className="relative z-10 max-w-2xl">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#F4A11A]/30 bg-white/6 px-4 py-2 backdrop-blur-sm">
@@ -23,7 +23,7 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="text-3xl font-black leading-none tracking-tight sm:text-5xl lg:text-5xl xl:text-6xl">
             BIG FLAVOR.
             <br />
             <span className="text-[#F4A11A]">NO</span>{" "}

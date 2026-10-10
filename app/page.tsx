@@ -14,8 +14,9 @@ export default function Home() {
     <Marquee/>
     <MenuCategories/>
     <Deals/>
-    <Branches/>
     <StaticCards/>
+    <Branches/>
+    
     <Reviews/>
     <CTA />
    </div>
