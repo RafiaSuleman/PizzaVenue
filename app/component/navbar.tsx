@@ -4,11 +4,8 @@ import { useState } from "react";
 import { Menu, Search, MapPin } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
-const PickupLocations = dynamic(
-  () => import("./picupLoc"),
-  { ssr: false }
-);
+import { useRouter } from "next/navigation";
+const PickupLocations = dynamic(() => import("./picupLoc"), { ssr: false });
 import BranchWhatsAppModal from "./whatsAppBranchSec";
 import Link from "next/link";
 
@@ -16,6 +13,7 @@ const Navbar = () => {
   const [pickupOpen, setPickupOpen] = useState(false);
   const [deliveryOpen, setDeliveryOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const router = useRouter();
 
   return (
     <>
@@ -32,18 +30,19 @@ const Navbar = () => {
                   src="/logo.png"
                   alt="Pizza Venue Logo"
                   width={50}
-                height={50}
-              />
+                  height={50}
+                />
 
-              <div className="flex items-center gap-1">
-                <h1 className="text-2xl font-extrabold leading-none text-[#C62828]">
-                  Pizza
-                </h1>
-                <p className="text-2xl font-extrabold leading-none text-[#F4A11A]">
-                  Venue
-                </p>
+                <div className="flex items-center gap-1">
+                  <h1 className="text-2xl font-extrabold leading-none text-[#C62828]">
+                    Pizza
+                  </h1>
+                  <p className="text-2xl font-extrabold leading-none text-[#F4A11A]">
+                    Venue
+                  </p>
+                </div>
               </div>
-            </div></Link>
+            </Link>
           </div>
 
           {/* Delivery / Pick-up */}
@@ -64,31 +63,31 @@ const Navbar = () => {
           </div>
 
           {/* Search */}
-          <div className="flex-1">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                if (search.trim()) {
-                  window.dispatchEvent(
-                    new CustomEvent("pizza-search", {
-                      detail: search.trim(),
-                    })
-                  );
-                }
-              }}
-              className="flex items-center rounded-full border border-gray-200 bg-gray-50 px-4 py-3"
-            >
-              <Search size={20} className="mr-2 shrink-0 text-gray-500" />
+        {/* Search */}
+<div className="flex-1">
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
 
-              <input
-                type="search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search Pizza, Burgers, Pasta..."
-                className="w-full bg-transparent text-sm outline-none placeholder:text-gray-500"
-              />
-            </form>
-          </div>
+      const query = search.trim();
+
+      if (query) {
+        router.push(`/menu?search=${encodeURIComponent(query)}`);
+      }
+    }}
+    className="flex items-center rounded-full border border-gray-200 bg-gray-50 px-4 py-3"
+  >
+    <Search size={20} className="mr-2 shrink-0 text-gray-500" />
+
+    <input
+      type="search"
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      placeholder="Search Pizza, Burgers, Pasta..."
+      className="w-full bg-transparent text-sm outline-none placeholder:text-gray-500"
+    />
+  </form>
+</div>
 
           {/* Delivery Address */}
           {/* <button className="hidden items-center gap-2 rounded-full border border-gray-200 px-4 py-3 text-left hover:border-[#C62828] xl:flex">
@@ -103,10 +102,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <PickupLocations
-        open={pickupOpen}
-        onClose={() => setPickupOpen(false)}
-      />
+      <PickupLocations open={pickupOpen} onClose={() => setPickupOpen(false)} />
 
       <BranchWhatsAppModal
         open={deliveryOpen}
