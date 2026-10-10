@@ -7,6 +7,7 @@ import Branches from "./component/branches";
 import Reviews from "./component/reviews";
 import CTA from "./component/cta";
 import Marquee from "./component/marqee";
+import WhyChooseUs from "./component/whyChooseUs";
 export default function Home() {
   return (
    <div>
@@ -15,10 +16,11 @@ export default function Home() {
     <MenuCategories/>
     <Deals/>
     <StaticCards/>
+    <WhyChooseUs/>
     <Branches/>
-    
     <Reviews/>
     <CTA />
+    <WhyChooseUs/>
    </div>
   );
 }
