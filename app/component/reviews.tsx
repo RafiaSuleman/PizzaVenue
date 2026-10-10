@@ -36,7 +36,7 @@ export default function Reviews() {
         <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p className="mb-3 flex items-center gap-2 text-xs font-extrabold uppercase tracking-[3px] text-[#C62828] sm:text-sm">
-              <span className="h-[2px] w-7 bg-[#F4A11A]" />
+              <span className="h-0.5 w-7 bg-[#F4A11A]" />
               Real Flavors, Happy Moments
             </p>
 

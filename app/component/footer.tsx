@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Clock, Phone, ArrowUpRight } from "lucide-react";
+import { MapPin, Clock,  ArrowUpRight } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -78,7 +78,7 @@ export default function Footer() {
             </h3>
 
             <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.06] text-[#F4A11A]">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/6 text-[#F4A11A]">
                 <Clock size={20} />
               </div>
 

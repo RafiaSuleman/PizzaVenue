@@ -38,7 +38,7 @@ export default function StaticCards() {
         <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end md:mb-12">
           <div>
             <p className="mb-3 flex items-center gap-2 text-xs font-extrabold uppercase tracking-[3px] text-[#C62828] sm:text-sm">
-              <span className="h-[2px] w-7 bg-[#F4A11A]" />
+              <span className="h-0.5 w-7 bg-[#F4A11A]" />
               The Venue Experience
             </p>
 
@@ -59,7 +59,7 @@ export default function StaticCards() {
           {cards.map((card) => (
             <article
               key={card.number}
-              className="group relative h-[350px] overflow-hidden rounded-2xl bg-[#171717] shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl sm:h-[400px]"
+              className="group relative h-87.5 overflow-hidden rounded-2xl bg-[#171717] shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl sm:h-100"
             >
               <Image
                 src={card.image}
@@ -70,7 +70,7 @@ export default function StaticCards() {
               />
 
               {/* Image overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/5 transition duration-500 group-hover:from-black/90" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/35 to-black/5 transition duration-500 group-hover:from-black/90" />
 
               {/* Top row */}
               <div className="absolute inset-x-5 top-5 flex items-center justify-between">

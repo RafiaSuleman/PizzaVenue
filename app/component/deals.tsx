@@ -30,7 +30,7 @@ export default function Deals() {
         <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p className="mb-3 flex items-center gap-2 text-xs font-extrabold uppercase tracking-[3px] text-[#C62828] sm:text-sm">
-              <span className="h-[2px] w-8 bg-[#F4A11A]" />
+              <span className="h-0.5 w-8 bg-[#F4A11A]" />
               Made for Sharing
             </p>
 
@@ -60,7 +60,7 @@ export default function Deals() {
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-950/10"
             >
               {/* Top accent */}
-              <div className="h-1.5 bg-gradient-to-r from-[#C62828] via-[#E65100] to-[#F4A11A]" />
+              <div className="h-1.5 bg-linear-to-r from-[#C62828] via-[#E65100] to-[#F4A11A]" />
 
               <div className="flex flex-1 flex-col p-5 sm:p-6">
                 {/* Deal heading and price */}

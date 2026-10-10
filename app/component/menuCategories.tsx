@@ -44,7 +44,7 @@ export default function MenuCategories() {
         <div className="mb-8 flex items-end justify-between gap-4 sm:mb-10">
           <div>
             <p className="mb-2 flex items-center gap-2 text-xs font-extrabold uppercase tracking-[3px] text-[#C62828] sm:text-sm">
-              <span className="h-[2px] w-7 bg-[#F4A11A]" />
+              <span className="h-0.5 w-7 bg-[#F4A11A]" />
               Something Delicious
             </p>
 
@@ -85,20 +85,20 @@ export default function MenuCategories() {
             ref={sliderRef}
             className="flex gap-4 overflow-x-auto scroll-smooth px-1 py-4 scrollbar-hide sm:gap-5 md:gap-6"
           >
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <button
                 type="button"
                 key={category.name}
                 onClick={() =>
                   router.push(`/menu/${category.name.toLowerCase()}`)
                 }
-                className="group relative w-[230px] shrink-0 overflow-hidden rounded-2xl border border-gray-200/80 bg-white text-left shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#F4A11A] hover:shadow-xl sm:w-[250px]"
+                className="group relative w-57.5 shrink-0 overflow-hidden rounded-2xl border border-gray-200/80 bg-white text-left shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#F4A11A] hover:shadow-xl sm:w-62.5"
               >
                 {/* Top accent */}
                 <div className="absolute inset-x-0 top-0 z-10 h-1 origin-left scale-x-0 bg-[#C62828] transition-transform duration-300 group-hover:scale-x-100" />
 
                 {/* Image */}
-                <div className="flex h-[205px] items-center justify-center overflow-hidden bg-white p-5 sm:h-[225px]">
+                <div className="flex h-51.25 items-center justify-center overflow-hidden bg-white p-5 sm:h-56.25">
                   <Image
                     src={category.image}
                     alt={category.name}

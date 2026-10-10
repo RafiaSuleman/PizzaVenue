@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
       <div className="relative mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
           <p className="mb-3 flex items-center gap-2 text-xs font-extrabold uppercase tracking-[3px] text-[#F4A11A] sm:text-sm">
-            <span className="h-[2px] w-7 bg-[#C62828]" />
+            <span className="h-0.5 w-7 bg-[#C62828]" />
             The Pizza Venue Difference
           </p>
 
@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
             return (
               <article
                 key={feature.number}
-                className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#F4A11A]/50 hover:bg-white/[0.07]"
+                className="group rounded-2xl border border-white/10 bg-white/4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#F4A11A]/50 hover:bg-white/[0.07]"
               >
                 <div className="mb-8 flex items-center justify-between">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#C62828]/15 text-[#F4A11A] transition-colors group-hover:bg-[#C62828] group-hover:text-white">
